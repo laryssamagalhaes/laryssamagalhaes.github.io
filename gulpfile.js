@@ -7,8 +7,9 @@ var cssglobbing = require('gulp-css-globbing');
 var autoprefixer = require('gulp-autoprefixer');
 var cmq = require('gulp-merge-media-queries');
 var browserSync = require('browser-sync').create();
+var imagemin = require('gulp-imagemin');
 
-gulp.task('default', ['sass', 'browser-sync', 'watch'], function(){});
+gulp.task('default', ['sass','imagemin', 'browser-sync', 'watch'], function(){});
 
 gulp.task('sass', function () {
   return gulp.src('./app/assets/sass/main.scss')
@@ -43,3 +44,10 @@ gulp.task('browser-sync', function () {
 gulp.task('refresh', function () {
   	browserSync.reload();
 });
+
+
+gulp.task('imagemin', () =>
+  gulp.src(['./app/assets/img/*.png', './app/assets/img/*.jpg'])
+    .pipe(imagemin())
+    .pipe(gulp.dest('assets/img/'))
+);
