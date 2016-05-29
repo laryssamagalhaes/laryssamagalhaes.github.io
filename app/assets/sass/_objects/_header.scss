@@ -1,0 +1,23 @@
+.header{
+	margin-top: 20px;
+
+	@media all and(max-width: $min){
+		margin-top: 10px;
+	}
+
+	&__userIcon {
+		border-radius: 50%;
+    	width: 30px;
+    	height: 30px;
+    	background: $white;
+	}
+
+	&__menuIcon {
+		float: right;
+		
+		@media all and(max-width: $min){
+			right: 16px;
+    		position: relative;
+		}
+	}
+}
