@@ -11,7 +11,7 @@ function App() {
       <section className="flex-05">
         <Header />
         <div className="descriptionContainer">
-          <Title text="Hello, my name is Laryssa." />
+          <Title text="Hello, my name's Laryssa." />
           <Description text="I'm a Front end developer and Brazilian. I love working with Javascript also I like going to meetups and contribute to the dev community. 🇧🇷 👩🏼‍💻 👊🏼" />
         </div>
       </section>
